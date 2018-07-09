@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4fi-ER-J1w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="vFW-O3-X3Z">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController navigationBarHidden="YES" id="4fi-ER-J1w" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cKR-bk-8Kh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sRy-Vy-14P" kind="relationship" relationship="rootViewController" id="DyJ-HV-0Yc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpx-p9-whY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="-1460"/>
+        </scene>
+        <!--Launch-->
+        <scene sceneID="bLa-iO-X3H">
+            <objects>
+                <viewController title="Launch" id="sRy-Vy-14P" customClass="LaunchViewController" customModule="Convey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j8Z-hi-OC1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="10V-lL-cTG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7he-oD-Uhz"/>
+                    <connections>
+                        <segue destination="58a-w0-SCG" kind="presentation" identifier="Welcome" id="Uxc-BR-5tK"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKM-Bh-Rh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="908" y="-1459"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="bTJ-DX-LeK">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" title="Welcome" id="58a-w0-SCG" customClass="WelcomeViewController" customModule="Convey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ilH-RC-yfO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gir-XP-8Uh">
+                                <rect key="frame" x="37" y="554" width="300" height="46"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.82745098039999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Nlp-8Y-hJX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="S3y-6q-Fhh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="0.99579277970000002" blue="0.99542664560000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="1" green="0.99579277970000002" blue="0.99542664560000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convey helps you connect easily with friends from around the world" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-wo-JAi">
+                                <rect key="frame" x="60" y="489" width="256.5" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="288" id="AjY-GR-c58"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <color key="textColor" red="0.50588235290000005" green="0.56470588239999997" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELT-2K-ePa">
+                                <rect key="frame" x="43" y="444" width="288" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="To7-xQ-Tde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                <color key="textColor" red="0.2784313725" green="0.32156862749999998" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-YB-gwD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONVEY!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNQ-0h-dTp">
+                                        <rect key="frame" x="70" y="182" width="235" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1450980392" green="0.82745098039999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.99579277970000002" blue="0.99542664560000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="YNQ-0h-dTp" firstAttribute="centerY" secondItem="fbQ-YB-gwD" secondAttribute="centerY" id="SKB-tF-0Ji"/>
+                                    <constraint firstItem="YNQ-0h-dTp" firstAttribute="centerX" secondItem="fbQ-YB-gwD" secondAttribute="centerX" id="fah-Pl-Vdz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-Il-gFM">
+                                <rect key="frame" x="79.5" y="620" width="216" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="203" id="enE-pV-ghp"/>
+                                    <constraint firstAttribute="height" constant="27" id="iFB-zh-fTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <state key="normal" title="Don't have an account? Sign up here">
+                                    <color key="titleColor" red="0.61769517920000006" green="0.65734697799999997" blue="0.6837127221" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oSI-Il-gFM" firstAttribute="top" secondItem="Gir-XP-8Uh" secondAttribute="bottom" constant="20" id="4Ej-q8-nWl"/>
+                            <constraint firstItem="Gir-XP-8Uh" firstAttribute="top" secondItem="L6g-wo-JAi" secondAttribute="bottom" constant="30" id="IdT-1h-KGr"/>
+                            <constraint firstItem="fbQ-YB-gwD" firstAttribute="leading" secondItem="88e-94-2vV" secondAttribute="leading" id="Iz7-m6-lPm"/>
+                            <constraint firstItem="fbQ-YB-gwD" firstAttribute="top" secondItem="ilH-RC-yfO" secondAttribute="top" id="KrZ-r8-vKN"/>
+                            <constraint firstItem="88e-94-2vV" firstAttribute="trailing" secondItem="fbQ-YB-gwD" secondAttribute="trailing" id="MAf-Ag-P7g"/>
+                            <constraint firstItem="fbQ-YB-gwD" firstAttribute="centerX" secondItem="ilH-RC-yfO" secondAttribute="centerX" id="Ned-uG-N8w"/>
+                            <constraint firstItem="L6g-wo-JAi" firstAttribute="top" secondItem="ELT-2K-ePa" secondAttribute="bottom" constant="10" id="SLD-Bq-209"/>
+                            <constraint firstItem="ELT-2K-ePa" firstAttribute="centerX" secondItem="ilH-RC-yfO" secondAttribute="centerX" id="bq1-uw-flf"/>
+                            <constraint firstItem="L6g-wo-JAi" firstAttribute="centerX" secondItem="ilH-RC-yfO" secondAttribute="centerX" id="cbM-zh-5Df"/>
+                            <constraint firstItem="ELT-2K-ePa" firstAttribute="top" secondItem="fbQ-YB-gwD" secondAttribute="bottom" constant="20" id="ega-Oo-Y89"/>
+                            <constraint firstItem="oSI-Il-gFM" firstAttribute="centerX" secondItem="ilH-RC-yfO" secondAttribute="centerX" id="k3u-TH-kUC"/>
+                            <constraint firstItem="88e-94-2vV" firstAttribute="bottom" secondItem="oSI-Il-gFM" secondAttribute="bottom" constant="20" id="rIS-aB-zes"/>
+                            <constraint firstItem="Gir-XP-8Uh" firstAttribute="centerX" secondItem="ilH-RC-yfO" secondAttribute="centerX" id="zgL-zD-yYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="88e-94-2vV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1c0-Ve-JNE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5y7-5P-YdD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="529" y="-685"/>
         </scene>
     </scenes>
 </document>
