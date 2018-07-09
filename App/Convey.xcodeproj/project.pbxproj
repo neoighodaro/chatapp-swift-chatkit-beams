@@ -12,6 +12,10 @@
 		B5C2D9EA20F389CB00FFC8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9E820F389CB00FFC8E9 /* Main.storyboard */; };
 		B5C2D9EC20F389CC00FFC8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9EB20F389CC00FFC8E9 /* Assets.xcassets */; };
 		B5C2D9EF20F389CC00FFC8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9ED20F389CC00FFC8E9 /* LaunchScreen.storyboard */; };
+		B5C2D9FA20F38E5A00FFC8E9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9F920F38E5A00FFC8E9 /* AuthService.swift */; };
+		B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */; };
+		B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */; };
+		B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */; };
 		BD0F12486A7CB9C6FFD862E6 /* Pods_Convey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E1B8E23D880706AD26E25 /* Pods_Convey.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +28,10 @@
 		B5C2D9EB20F389CC00FFC8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C2D9EE20F389CC00FFC8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C2D9F020F389CC00FFC8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C2D9F920F38E5A00FFC8E9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConveyAccessToken.swift; sourceTree = "<group>"; };
+		B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConveyAccessTokenService.swift; sourceTree = "<group>"; };
+		B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D136183AAEB34A6BE88D307D /* Pods-Convey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.release.xcconfig"; sourceTree = "<group>"; };
 		D3A36FC806885E358F9316DC /* Pods-Convey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */,
+				B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,9 +108,20 @@
 		B5C2D9F720F38DD100FFC8E9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B5C2D9F820F38E3F00FFC8E9 /* Services */,
 				B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */,
+				B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		B5C2D9F820F38E3F00FFC8E9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B5C2D9F920F38E5A00FFC8E9 /* AuthService.swift */,
+				B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C2D9FA20F38E5A00FFC8E9 /* AuthService.swift in Sources */,
+				B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */,
+				B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */,
+				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
 				B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */,
 				B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */,
 			);

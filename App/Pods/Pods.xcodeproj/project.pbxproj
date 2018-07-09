@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -215,7 +215,7 @@
 		01BF50428FED823701B5FEFF649FD9B8 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Extensions.swift"; path = "Sources/Extensions/Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		0212A6A363DFB9B4BC181C50AB93E43C /* PPDefaultLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPDefaultLogger.swift; path = Sources/PPDefaultLogger.swift; sourceTree = "<group>"; };
 		036297CDA072B259E30B2B00D37437B2 /* PusherChatkit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PusherChatkit-prefix.pch"; sourceTree = "<group>"; };
-		03DADF3E5F2F06B7D3CBFA21E169231A /* MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MessageKit.framework; path = MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DADF3E5F2F06B7D3CBFA21E169231A /* MessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04559547A161E5E200E0D744C7853738 /* PCRoomStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCRoomStore.swift; path = Sources/PCRoomStore.swift; sourceTree = "<group>"; };
 		089B275C393B9D20DEC3998D85222859 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		08CDA4F2D697157C8B717AF7373385FE /* MessagesCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessagesCollectionViewFlowLayout.swift; path = Sources/Layout/MessagesCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		43E974C7B545A5FD132112AD0D1395F0 /* PCProgressCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCProgressCounter.swift; path = Sources/PCProgressCounter.swift; sourceTree = "<group>"; };
 		449802CEF30EE31266215E293E81DB1D /* PCMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCMessage.swift; path = Sources/PCMessage.swift; sourceTree = "<group>"; };
 		47F23534BD396551981071998EE03190 /* Pods-Convey-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Convey-dummy.m"; sourceTree = "<group>"; };
-		48EF585DDAD0F11BFC87E1DDE1DFA4D6 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Convey.framework; path = "Pods-Convey.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48EF585DDAD0F11BFC87E1DDE1DFA4D6 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A464F65EE7D2A0F96748A13E0A7E81F /* PusherPlatform-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PusherPlatform-dummy.m"; sourceTree = "<group>"; };
 		4D3F9A56087E3F4CE092EE352A71C0A7 /* SeparatorLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SeparatorLine.swift; path = Sources/Views/SeparatorLine.swift; sourceTree = "<group>"; };
 		50AFB2AD6EA41A9858E2B7D52090F3E3 /* MessagesDisplayDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessagesDisplayDelegate.swift; path = Sources/Protocols/MessagesDisplayDelegate.swift; sourceTree = "<group>"; };
@@ -285,13 +285,13 @@
 		68A198730CA18B053CF2C3526E7A01EE /* PPGeneralRequestURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPGeneralRequestURLSessionDelegate.swift; path = Sources/PPGeneralRequestURLSessionDelegate.swift; sourceTree = "<group>"; };
 		6949A3FF981CC029791C3A747E2CF14E /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		6A4210B2E9114F3A715B8CA747CD8BDF /* PCAttachmentUploadResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCAttachmentUploadResponse.swift; path = Sources/PCAttachmentUploadResponse.swift; sourceTree = "<group>"; };
-		6C3A7D5D58D5D8B3FEC9A30743C738E9 /* MessageKitAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MessageKitAssets.bundle; path = "MessageKit-MessageKitAssets.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3A7D5D58D5D8B3FEC9A30743C738E9 /* MessageKitAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageKitAssets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D20BF7C0C7E622A5E41D5DECAC02DC7 /* PPSDKInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPSDKInfo.swift; path = Sources/PPSDKInfo.swift; sourceTree = "<group>"; };
 		6E1189EE7EBAB4B359E88F99D95D4E57 /* MessagesCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessagesCollectionView.swift; path = Sources/Views/MessagesCollectionView.swift; sourceTree = "<group>"; };
 		74777515F29125E1ECA99E4849253212 /* PusherPlatform.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PusherPlatform.xcconfig; sourceTree = "<group>"; };
 		748210892DEA5D98835BCC66E792F35D /* PCSynchronizedArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCSynchronizedArray.swift; path = Sources/PCSynchronizedArray.swift; sourceTree = "<group>"; };
 		7486067E03821A08A1C483C1584AC6E5 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		775A1E2E65FB53B5B5CB3D28CC88C346 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; name = Images; path = Assets/MessageKitAssets.bundle/Images; sourceTree = "<group>"; };
+		775A1E2E65FB53B5B5CB3D28CC88C346 /* Images */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Images; path = Assets/MessageKitAssets.bundle/Images; sourceTree = "<group>"; };
 		78D9B641F4B0572D3DE6CF9B03A0BDDA /* LocationMessageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationMessageCell.swift; path = Sources/Views/Cells/LocationMessageCell.swift; sourceTree = "<group>"; };
 		790A71A9536E5AC814F64241F3BF72C7 /* ChatManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChatManager.swift; path = Sources/ChatManager.swift; sourceTree = "<group>"; };
 		79E0EEE3CB64B43FCC23122D545C48AF /* MediaMessageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaMessageCell.swift; path = Sources/Views/Cells/MediaMessageCell.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		8D9998A7F744045274FD3DA4D157DC80 /* MessageKind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageKind.swift; path = Sources/Models/MessageKind.swift; sourceTree = "<group>"; };
 		9073FD2D13E064C18C6BC7E02BCF98A2 /* PPDefaultRetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPDefaultRetryStrategy.swift; path = Sources/PPDefaultRetryStrategy.swift; sourceTree = "<group>"; };
 		92A59FBE0798241C00982343E0233ADD /* MessageCellDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageCellDelegate.swift; path = Sources/Protocols/MessageCellDelegate.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		945E3BE090D0E5127ABA9C60C690D3C1 /* ResourceBundle-MessageKitAssets-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MessageKitAssets-Info.plist"; sourceTree = "<group>"; };
 		9809E3E22AC259D5632C67C747B2E02E /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		9AF04D290B44E70E27A1FAD20016C613 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 		D42C399EB4CB45CED0FA01181E1F0A28 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		D5D5CFB849C6C10D7656775042844405 /* MessageContentCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageContentCell.swift; path = Sources/Views/Cells/MessageContentCell.swift; sourceTree = "<group>"; };
 		D87ED734C56B93375E5BE6B15EAF9F05 /* PCAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCAttachment.swift; path = Sources/PCAttachment.swift; sourceTree = "<group>"; };
-		DB386A115B6D580CE1D12E039F05DA73 /* PusherPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PusherPlatform.framework; path = PusherPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB386A115B6D580CE1D12E039F05DA73 /* PusherPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PusherPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB1C61F0D892D651BFA8C2EB8D1902C /* PPHTTPBodyPair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPHTTPBodyPair.swift; path = Sources/PPHTTPBodyPair.swift; sourceTree = "<group>"; };
 		DD080180A1851BD21354B9C8CA0A3AF9 /* PCBasicMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBasicMessage.swift; path = Sources/PCBasicMessage.swift; sourceTree = "<group>"; };
 		DFAC3029E5C0083DF237F12D7105C8C6 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
@@ -374,12 +374,12 @@
 		E0C9C33320069BEFC94AD7849665CBC3 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageCollectionViewCell.swift; path = Sources/Views/Cells/MessageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E30AAFB34801F03035D16373E3F0ED10 /* Pods-Convey-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Convey-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E311E751EBE99D34640B8FA93820A181 /* PCSharedInstanceOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCSharedInstanceOptions.swift; path = Sources/PCSharedInstanceOptions.swift; sourceTree = "<group>"; };
-		E373CE806E4D4EAF8AD475A415F0BA76 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E373CE806E4D4EAF8AD475A415F0BA76 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4961390BE4667C1E1BBE8204B29627B /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		E689EDA1F393D272ED1400E673EA329C /* CGRect+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Extensions.swift"; path = "Sources/Extensions/CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		E6D9B82AB1B0F6841D64278A2ADB8DDF /* PPDownloadDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPDownloadDelegate.swift; path = Sources/PPDownloadDelegate.swift; sourceTree = "<group>"; };
 		E6DEF0E52A013A4483837B6F45E56D95 /* MessagesLayoutDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessagesLayoutDelegate.swift; path = Sources/Protocols/MessagesLayoutDelegate.swift; sourceTree = "<group>"; };
-		E96EB75F1A3438F84B653731627ABDB1 /* PusherChatkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PusherChatkit.framework; path = PusherChatkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E96EB75F1A3438F84B653731627ABDB1 /* PusherChatkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PusherChatkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB4BD119FABA294819E182F053D0FB4 /* PPUploadDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PPUploadDelegate.swift; path = Sources/PPUploadDelegate.swift; sourceTree = "<group>"; };
 		EBE15EA7F2D7DE6487D0F796D754253B /* PCFetchedAttachment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCFetchedAttachment.swift; path = Sources/PCFetchedAttachment.swift; sourceTree = "<group>"; };
 		ED969F96F366C078C9BBC1C9A6E5A6AB /* PCBasicMessageEnricher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBasicMessageEnricher.swift; path = Sources/PCBasicMessageEnricher.swift; sourceTree = "<group>"; };
@@ -480,7 +480,6 @@
 				2B68CE7A5D6909156359772835BA03DB /* Validation.swift */,
 				FC5916C598E8A4EA47C1229DB8538E32 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -590,7 +589,6 @@
 				5E4B79CF5464357E943179222D9BEDAB /* PPTypealiases.swift */,
 				575BB29DFDEB401F5E64E1A691ACBE2C /* Support Files */,
 			);
-			name = PusherChatkit;
 			path = PusherChatkit;
 			sourceTree = "<group>";
 		};
@@ -641,7 +639,6 @@
 				A59BDBFF7ACB9F84AF9A319F594284BF /* PPUploadURLSessionDelegate.swift */,
 				888A5CE3894A045CCA04FACFBF0C4CAB /* Support Files */,
 			);
-			name = PusherPlatform;
 			path = PusherPlatform;
 			sourceTree = "<group>";
 		};
@@ -751,7 +748,6 @@
 				1A6F32CD06828E6FF1DC457F480EC9A7 /* Resources */,
 				BDF14D9A889EF22EC7CB852C4A537CE5 /* Support Files */,
 			);
-			name = MessageKit;
 			path = MessageKit;
 			sourceTree = "<group>";
 		};
@@ -931,7 +927,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 0940;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1257,6 +1253,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -1279,11 +1276,7 @@
 				INFOPLIST_FILE = "Target Support Files/PusherChatkit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PusherChatkit/PusherChatkit.modulemap";
 				PRODUCT_MODULE_NAME = PusherChatkit;
 				PRODUCT_NAME = PusherChatkit;
@@ -1316,11 +1309,7 @@
 				INFOPLIST_FILE = "Target Support Files/MessageKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MessageKit/MessageKit.modulemap";
 				PRODUCT_MODULE_NAME = MessageKit;
 				PRODUCT_NAME = MessageKit;
@@ -1354,11 +1343,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Convey/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Convey/Pods-Convey.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1394,11 +1379,7 @@
 				INFOPLIST_FILE = "Target Support Files/PusherPlatform/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PusherPlatform/PusherPlatform.modulemap";
 				PRODUCT_MODULE_NAME = PusherPlatform;
 				PRODUCT_NAME = PusherPlatform;
@@ -1431,11 +1412,7 @@
 				INFOPLIST_FILE = "Target Support Files/PusherPlatform/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PusherPlatform/PusherPlatform.modulemap";
 				PRODUCT_MODULE_NAME = PusherPlatform;
 				PRODUCT_NAME = PusherPlatform;
@@ -1485,11 +1462,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-Convey/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Convey/Pods-Convey.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1525,11 +1498,7 @@
 				INFOPLIST_FILE = "Target Support Files/PusherChatkit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PusherChatkit/PusherChatkit.modulemap";
 				PRODUCT_MODULE_NAME = PusherChatkit;
 				PRODUCT_NAME = PusherChatkit;
@@ -1561,11 +1530,7 @@
 				INFOPLIST_FILE = "Target Support Files/MessageKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MessageKit/MessageKit.modulemap";
 				PRODUCT_MODULE_NAME = MessageKit;
 				PRODUCT_NAME = MessageKit;
@@ -1676,11 +1641,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1713,11 +1674,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
