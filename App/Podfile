@@ -7,4 +7,5 @@ target 'Convey' do
   pod 'Alamofire', '~> 4.7.2'
   pod 'PusherChatkit', '~> 0.8.2'
   pod 'MessageKit', '~> 1.0.0'
+  pod 'NotificationBannerSwift', '~> 1.6.3'
 end
