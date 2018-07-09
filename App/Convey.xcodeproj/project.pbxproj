@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */; };
+		B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */; };
 		B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */; };
 		B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */; };
 		B5C2D9EA20F389CB00FFC8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9E820F389CB00FFC8E9 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		158E1B8E23D880706AD26E25 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		B5C2D9E120F389CB00FFC8E9 /* Convey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */,
 				B5C2DA0120F398E800FFC8E9 /* SignupViewController.swift */,
 				B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */,
+				B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				B5C2DA0620F39C9E00FFC8E9 /* AppConstants.swift in Sources */,
 				B5C2DA0220F398E800FFC8E9 /* SignupViewController.swift in Sources */,
 				B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */,
+				B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */,
 				B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */,
 				B5C2DA0420F39AFF00FFC8E9 /* UserService.swift in Sources */,
 				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
