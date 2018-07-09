@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
@@ -13,6 +12,11 @@ return [
     | to have a conventional place to find your various credentials.
     |
     */
+
+    'chatkit' => [
+        'instanceLocator' => env('CHATKIT_INSTANCE_LOCATOR'),
+        'secret' => env('CHATKIT_SECRET_KEY'),
+    ],
 
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
@@ -34,5 +38,4 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
 ];
