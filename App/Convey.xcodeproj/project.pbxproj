@@ -16,6 +16,9 @@
 		B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */; };
 		B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */; };
 		B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */; };
+		B5C2DA0220F398E800FFC8E9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2DA0120F398E800FFC8E9 /* SignupViewController.swift */; };
+		B5C2DA0420F39AFF00FFC8E9 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2DA0320F39AFF00FFC8E9 /* UserService.swift */; };
+		B5C2DA0620F39C9E00FFC8E9 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2DA0520F39C9E00FFC8E9 /* AppConstants.swift */; };
 		BD0F12486A7CB9C6FFD862E6 /* Pods_Convey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E1B8E23D880706AD26E25 /* Pods_Convey.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConveyAccessToken.swift; sourceTree = "<group>"; };
 		B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConveyAccessTokenService.swift; sourceTree = "<group>"; };
 		B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B5C2DA0120F398E800FFC8E9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		B5C2DA0320F39AFF00FFC8E9 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B5C2DA0520F39C9E00FFC8E9 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		D136183AAEB34A6BE88D307D /* Pods-Convey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.release.xcconfig"; sourceTree = "<group>"; };
 		D3A36FC806885E358F9316DC /* Pods-Convey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,7 @@
 			children = (
 				B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */,
 				B5C2D9FF20F3968800FFC8E9 /* WelcomeViewController.swift */,
+				B5C2DA0120F398E800FFC8E9 /* SignupViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 			children = (
 				B5C2D9F820F38E3F00FFC8E9 /* Services */,
 				B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */,
+				B5C2DA0520F39C9E00FFC8E9 /* AppConstants.swift */,
 				B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */,
 			);
 			path = Classes;
@@ -120,6 +128,7 @@
 			children = (
 				B5C2D9F920F38E5A00FFC8E9 /* AuthService.swift */,
 				B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */,
+				B5C2DA0320F39AFF00FFC8E9 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -201,16 +210,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Convey/Pods-Convey-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PusherChatkit/PusherChatkit.framework",
 				"${BUILT_PRODUCTS_DIR}/PusherPlatform/PusherPlatform.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherChatkit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherPlatform.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,8 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C2D9FA20F38E5A00FFC8E9 /* AuthService.swift in Sources */,
+				B5C2DA0620F39C9E00FFC8E9 /* AppConstants.swift in Sources */,
+				B5C2DA0220F398E800FFC8E9 /* SignupViewController.swift in Sources */,
 				B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */,
 				B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */,
+				B5C2DA0420F39AFF00FFC8E9 /* UserService.swift in Sources */,
 				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
 				B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */,
 				B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */,
