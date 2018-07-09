@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct AppConstants {
+    static let ENDPOINT = "http://127.0.0.1:8000"
+    static let CLIENT_ID = "2"
+    static let CLIENT_SECRET = "RVPo8UhvaNxAi839JIV9O4ySvEUDZV1oXOWfuXdv"
+}

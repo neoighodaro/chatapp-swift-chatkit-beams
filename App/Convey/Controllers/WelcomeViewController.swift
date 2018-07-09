@@ -10,8 +10,16 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if AuthService.shared.isLoggedIn() {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
+    @IBAction func welcomeButtonPressed(_ sender: Any?) {
+        performSegue(withIdentifier: "Signup", sender: self)
+    }
+
 }

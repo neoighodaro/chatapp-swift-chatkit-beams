@@ -10,8 +10,8 @@ import UIKit
 
 class LaunchViewController: UIViewController {
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let storyboardID = AuthService.shared.isLoggedIn() ? "Contacts" : "Welcome"
         performSegue(withIdentifier: storyboardID, sender: self)

@@ -25,4 +25,8 @@ class AuthService {
         return token
     }
     
+    func setToken(_ token: ConveyAccessToken) {
+        ConveyAccessTokenService.shared.save(token: token)
+    }
+    
 }
