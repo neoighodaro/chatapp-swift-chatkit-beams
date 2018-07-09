@@ -12,9 +12,11 @@
 		B5C2D9EA20F389CB00FFC8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9E820F389CB00FFC8E9 /* Main.storyboard */; };
 		B5C2D9EC20F389CC00FFC8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9EB20F389CC00FFC8E9 /* Assets.xcassets */; };
 		B5C2D9EF20F389CC00FFC8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9ED20F389CC00FFC8E9 /* LaunchScreen.storyboard */; };
+		BD0F12486A7CB9C6FFD862E6 /* Pods_Convey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E1B8E23D880706AD26E25 /* Pods_Convey.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		158E1B8E23D880706AD26E25 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C2D9E120F389CB00FFC8E9 /* Convey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C2D9E620F389CB00FFC8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		B5C2D9EB20F389CC00FFC8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C2D9EE20F389CC00FFC8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C2D9F020F389CC00FFC8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D136183AAEB34A6BE88D307D /* Pods-Convey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.release.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.release.xcconfig"; sourceTree = "<group>"; };
+		D3A36FC806885E358F9316DC /* Pods-Convey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Convey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Convey/Pods-Convey.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0F12486A7CB9C6FFD862E6 /* Pods_Convey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C8504AF2027698277CD39FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A36FC806885E358F9316DC /* Pods-Convey.debug.xcconfig */,
+				D136183AAEB34A6BE88D307D /* Pods-Convey.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B2CCE81A56DE87354739910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				158E1B8E23D880706AD26E25 /* Pods_Convey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5C2D9D820F389CB00FFC8E9 = {
 			isa = PBXGroup;
 			children = (
 				B5C2D9E320F389CB00FFC8E9 /* Convey */,
 				B5C2D9E220F389CB00FFC8E9 /* Products */,
+				2C8504AF2027698277CD39FC /* Pods */,
+				5B2CCE81A56DE87354739910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5C2D9F320F389CC00FFC8E9 /* Build configuration list for PBXNativeTarget "Convey" */;
 			buildPhases = (
+				B5CAC2DA60795E32E6F82ADB /* [CP] Check Pods Manifest.lock */,
 				B5C2D9DD20F389CB00FFC8E9 /* Sources */,
 				B5C2D9DE20F389CB00FFC8E9 /* Frameworks */,
 				B5C2D9DF20F389CB00FFC8E9 /* Resources */,
+				2329A2E55961B16C42AE3AFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2329A2E55961B16C42AE3AFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Convey/Pods-Convey-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PusherChatkit/PusherChatkit.framework",
+				"${BUILT_PRODUCTS_DIR}/PusherPlatform/PusherPlatform.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherChatkit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherPlatform.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Convey/Pods-Convey-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CAC2DA60795E32E6F82ADB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Convey-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5C2D9DD20F389CB00FFC8E9 /* Sources */ = {
@@ -278,6 +349,7 @@
 		};
 		B5C2D9F420F389CC00FFC8E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A36FC806885E358F9316DC /* Pods-Convey.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +369,7 @@
 		};
 		B5C2D9F520F389CC00FFC8E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D136183AAEB34A6BE88D307D /* Pods-Convey.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

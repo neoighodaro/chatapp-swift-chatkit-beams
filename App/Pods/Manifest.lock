@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.2)
+  - MessageKit (1.0.0)
+  - PusherChatkit (0.8.4):
+    - PusherPlatform (~> 0.5.0)
+  - PusherPlatform (0.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7.2)
+  - MessageKit (~> 1.0.0)
+  - PusherChatkit (~> 0.8.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - MessageKit
+    - PusherChatkit
+    - PusherPlatform
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
+  PusherChatkit: 88dc701b236f6fcf46895bac35685f3fcf258ade
+  PusherPlatform: 207b5d16dae956a697d5d12d823d9855217998b0
+
+PODFILE CHECKSUM: dd6eea0498637306df977a2236b264d32571eb25
+
+COCOAPODS: 1.5.3
