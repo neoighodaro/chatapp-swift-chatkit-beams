@@ -39,6 +39,9 @@ class ConveyAccessTokenService: PPTokenProvider {
         completionHandler(.success(token: chatkitToken))
     }
 
+    func deleteToken() {
+        UserDefaults.standard.removeObject(forKey: ConveyAccessTokenService.key)
+    }
 }
 
 enum ConveyAccessTokenServiceError: Error {

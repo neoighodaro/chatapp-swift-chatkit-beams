@@ -18,6 +18,10 @@ class AuthService {
         return getAccessToken() != nil
     }
     
+    func logout() {
+        ConveyAccessTokenService.shared.deleteToken()
+    }
+    
     func getAccessToken() -> ConveyAccessToken? {
         guard let token = ConveyAccessTokenService.shared.fetch() else { return nil }
         guard token.chatkit != nil, token.api != nil else { return nil }
