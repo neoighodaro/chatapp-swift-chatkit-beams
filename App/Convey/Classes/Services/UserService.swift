@@ -42,7 +42,7 @@ class UserService {
         }
     }
 
-    func createAccount(name: String, email: String, password: String, handler: @escaping([String: Any]?) -> Void) {
+    func signup(name: String, email: String, password: String, handler: @escaping([String: Any]?) -> Void) {
         let params = ["name": name, "email": email, "password": password]
         
         request("/api/users/signup", .post, params: params, headers: nil) { resp in
@@ -55,7 +55,11 @@ class UserService {
         }
     }
     
-    fileprivate func request(_ url: String, _ method: HTTPMethod = .get, params: Parameters?, headers: HTTPHeaders?, handler: @escaping(AnyObject?) -> Void) {
+}
+
+fileprivate extension UserService {
+    
+    func request(_ url: String, _ method: HTTPMethod = .get, params: Parameters?, headers: HTTPHeaders?, handler: @escaping(AnyObject?) -> Void) {
         let encoding = JSONEncoding.default
         let url = AppConstants.ENDPOINT + url
         
@@ -68,7 +72,7 @@ class UserService {
             }
     }
     
-    fileprivate func authHeader(token: String?) -> HTTPHeaders {
+    func authHeader(token: String?) -> HTTPHeaders {
         let accessToken = (token == nil) ? AuthService.shared.getAccessToken()?.chatkit : token
         return [
             "Accept": "application/json",
