@@ -24,9 +24,9 @@ class SignupViewController: UIViewController {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        UserService.shared.createAccount(name: name, email: email, password: password) { user in
+        UserService.shared.signup(name: name, email: email, password: password) { user in
             if user == nil {
-                return StatusBarNotificationBanner(title: "Unable to create account", style: .danger).show()
+                return StatusBarNotificationBanner(title: "Cant create account", style: .danger).show()
             }
             
             self.presentingViewController?.dismiss(animated: true, completion: nil)
