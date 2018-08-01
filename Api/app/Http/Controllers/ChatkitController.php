@@ -14,10 +14,25 @@ class ChatkitController extends Controller
      */
     public function getToken(Chatkit $chatkit)
     {
-        $response = $chatkit->authenticate([
-            'user_id' => auth()->user()->chatkit_id
+        $user = auth()->user();
+
+        $response = $chatkit->authenticate(['user_id' => $user->chatkit_id]);
+
+        $data = array_merge($response['body'], [
+            'user' => $user->toArray(),
+            'user_id' => $user->id,
+            'chatkit_id' => $user->chatkit_id
         ]);
 
-        return response()->json($response['body'], $response['status']);
+        return response()->json($data, $response['status']);
+    }
+
+    public function getJoinableRooms(Chatkit $chatkit)
+    {
+        $response = $chatkit->rooms(false);
+
+        info((array) $response['body']);
+
+        return response()->json((array) $response['body']);
     }
 }

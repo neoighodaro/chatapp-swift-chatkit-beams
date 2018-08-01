@@ -14,6 +14,7 @@
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/chatkit/token', 'ChatkitController@getToken');
+    Route::get('/rooms', 'ChatkitController@getJoinableRooms');
 });
 
 Route::post('/users/signup', 'UserController@create');

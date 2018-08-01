@@ -12,4 +12,5 @@ struct AppConstants {
     static let ENDPOINT = "http://127.0.0.1:8000"
     static let CLIENT_ID = "2"
     static let CLIENT_SECRET = "RVPo8UhvaNxAi839JIV9O4ySvEUDZV1oXOWfuXdv"
+    static let INSTANCE_LOCATOR = "v1:us1:e429c15b-9aaa-4361-9550-342b5e043da3"
 }

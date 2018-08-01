@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55061F82110BE190029F250 /* JoinableRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */; };
+		B55061FA2110C04E0029F250 /* ChatkitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061F92110C04E0029F250 /* ChatkitService.swift */; };
+		B55061FC2110C6D80029F250 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061FB2110C6D80029F250 /* ServiceRequest.swift */; };
 		B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */; };
 		B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */; };
 		B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		158E1B8E23D880706AD26E25 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinableRoomsTableViewController.swift; sourceTree = "<group>"; };
+		B55061F92110C04E0029F250 /* ChatkitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatkitService.swift; sourceTree = "<group>"; };
+		B55061FB2110C6D80029F250 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		B5C2D9E120F389CB00FFC8E9 /* Convey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,7 @@
 				B5C2DA0120F398E800FFC8E9 /* SignupViewController.swift */,
 				B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */,
 				B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */,
+				B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 				B5C2D9F920F38E5A00FFC8E9 /* AuthService.swift */,
 				B5C2D9FD20F38FB000FFC8E9 /* ConveyAccessTokenService.swift */,
 				B5C2DA0320F39AFF00FFC8E9 /* UserService.swift */,
+				B55061F92110C04E0029F250 /* ChatkitService.swift */,
+				B55061FB2110C6D80029F250 /* ServiceRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -267,9 +276,12 @@
 				B5C2DA0620F39C9E00FFC8E9 /* AppConstants.swift in Sources */,
 				B5C2DA0220F398E800FFC8E9 /* SignupViewController.swift in Sources */,
 				B5C2D9FC20F38ECA00FFC8E9 /* ConveyAccessToken.swift in Sources */,
+				B55061F82110BE190029F250 /* JoinableRoomsTableViewController.swift in Sources */,
 				B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */,
 				B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */,
+				B55061FC2110C6D80029F250 /* ServiceRequest.swift in Sources */,
 				B5C2DA0420F39AFF00FFC8E9 /* UserService.swift in Sources */,
+				B55061FA2110C04E0029F250 /* ChatkitService.swift in Sources */,
 				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
 				B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */,
 				B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */,

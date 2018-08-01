@@ -24,7 +24,7 @@ class AuthService {
     
     func getAccessToken() -> ConveyAccessToken? {
         guard let token = ConveyAccessTokenService.shared.fetch() else { return nil }
-        guard token.chatkit != nil, token.api != nil else { return nil }
+        guard token.chatkit != nil, token.api != nil, token.user != nil else { return nil }
 
         return token
     }
