@@ -3,20 +3,39 @@
 namespace App\Http\Controllers;
 
 use App\Chatkit;
+use App\User;
+use Illuminate\Http\Request;
+use App\Room;
 
 class ChatkitController extends Controller
 {
     /**
+     * @var \App\Chatkit
+     */
+    protected $chatkit;
+
+    /**
+     * Class constructor
+     *
+     * @param Chatkit $chatkit
+     */
+    public function __construct(Chatkit $chatkit)
+    {
+        $this->chatkit = $chatkit;
+    }
+
+    /**
      * Checks a users login credentials.
      *
-     * @param  \App\Chatkit $chatkit
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getToken(Chatkit $chatkit)
+    public function getToken()
     {
         $user = auth()->user();
 
-        $response = $chatkit->authenticate(['user_id' => $user->chatkit_id]);
+        $response = (array) $this->chatkit->authenticate([
+            'user_id' => $user->chatkit_id
+        ]);
 
         $data = array_merge($response['body'], [
             'user' => $user->toArray(),
@@ -27,12 +46,105 @@ class ChatkitController extends Controller
         return response()->json($data, $response['status']);
     }
 
-    public function getJoinableRooms(Chatkit $chatkit)
+    /**
+     * Get the joined rooms for the user.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getJoinedRooms(Request $request)
     {
-        $response = $chatkit->rooms(false);
+        $rooms = $request->user()
+            ->rooms()
+            ->without('users')
+            ->orderBy('channel', 'ASC')
+            ->get()
+            ->toArray();
 
-        info((array) $response['body']);
+        return response()->json($rooms);
+    }
 
-        return response()->json((array) $response['body']);
+    /**
+     * Get the joinable rooms list.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getJoinableRooms()
+    {
+        $rooms = (array) $this->chatkit->rooms()['body'] ?? [];
+
+        return response()->json($rooms);
+    }
+
+    /**
+     * Create a new room for two users.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function createRoom(Request $request)
+    {
+        $me = $request->user();
+
+        $data = $request->validate([
+            'email' => "required|exists:users|not_in:{$me->email}"
+        ]);
+
+        $friend = User::whereEmail($data['email'])->first();
+
+        $room_name = str_random();
+
+        $chatkitRoom = $this->chatkit->createRoom([
+            'private' => true,
+            'name' => $room_name,
+            'creator_id' => $request->user()->chatkit_id,
+            'user_ids' => [$me->chatkit_id, $friend->chatkit_id]
+        ]);
+
+        $room = Room::create([
+            'channel' => false,
+            'name' => $room_name,
+            'chatkit_room_id' => $chatkitRoom['body']['id']
+        ]);
+
+        $room->users()->saveMany([$me, $friend]);
+
+        return response()->json(
+            array_merge($room->toArray(), ['name' => $friend->name])
+        );
+    }
+
+    /**
+     * Adds a user to a room.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function addToRoom(Request $request)
+    {
+        $me = $request->user();
+
+        $data = $request->validate([
+            'name' => 'required',
+            'room_id' => 'required',
+        ]);
+
+        $response = $this->chatkit->addUsersToRoom(
+            $data['room_id'],
+            [$me->chatkit_id]
+        );
+
+        if ($response['status'] == 204) {
+            $room = Room::firstOrCreate(
+                ['chatkit_room_id' => $data['room_id']],
+                ['channel' => true, 'name' => $data['name']]
+            );
+
+            if ($room->users()->whereUserId($me->id)->count() === 0) {
+                $room->users()->save($me);
+            }
+        }
+
+        return response()->json([], $response['status']);
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50EE2E7212DD90A00A4C557 /* ChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EE2E6212DD90A00A4C557 /* ChatroomViewController.swift */; };
+		B50EE2EA212DE3AA00A4C557 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EE2E9212DE3AA00A4C557 /* Message.swift */; };
 		B55061F82110BE190029F250 /* JoinableRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */; };
 		B55061FA2110C04E0029F250 /* ChatkitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061F92110C04E0029F250 /* ChatkitService.swift */; };
 		B55061FC2110C6D80029F250 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061FB2110C6D80029F250 /* ServiceRequest.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		158E1B8E23D880706AD26E25 /* Pods_Convey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Convey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B50EE2E6212DD90A00A4C557 /* ChatroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomViewController.swift; sourceTree = "<group>"; };
+		B50EE2E9212DE3AA00A4C557 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinableRoomsTableViewController.swift; sourceTree = "<group>"; };
 		B55061F92110C04E0029F250 /* ChatkitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatkitService.swift; sourceTree = "<group>"; };
 		B55061FB2110C6D80029F250 /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B50EE2E8212DE39D00A4C557 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B50EE2E9212DE3AA00A4C557 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B5C2D9D820F389CB00FFC8E9 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +133,7 @@
 				B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */,
 				B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */,
 				B55061F72110BE190029F250 /* JoinableRoomsTableViewController.swift */,
+				B50EE2E6212DD90A00A4C557 /* ChatroomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +141,7 @@
 		B5C2D9F720F38DD100FFC8E9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B50EE2E8212DE39D00A4C557 /* Models */,
 				B5C2D9F820F38E3F00FFC8E9 /* Services */,
 				B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */,
 				B5C2DA0520F39C9E00FFC8E9 /* AppConstants.swift */,
@@ -280,10 +294,12 @@
 				B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */,
 				B5C2D9FE20F38FB000FFC8E9 /* ConveyAccessTokenService.swift in Sources */,
 				B55061FC2110C6D80029F250 /* ServiceRequest.swift in Sources */,
+				B50EE2E7212DD90A00A4C557 /* ChatroomViewController.swift in Sources */,
 				B5C2DA0420F39AFF00FFC8E9 /* UserService.swift in Sources */,
 				B55061FA2110C04E0029F250 /* ChatkitService.swift in Sources */,
 				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
 				B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */,
+				B50EE2EA212DE3AA00A4C557 /* Message.swift in Sources */,
 				B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */,
 				B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */,
 			);

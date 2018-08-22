@@ -12,20 +12,32 @@ import NotificationBannerSwift
 
 class ContactsTableViewController: UITableViewController, PCChatManagerDelegate {
     
-    var rooms: [PCRoom] = []
+    var rooms: [[String: Any]] = []
     var friendTextField: UITextField?
+    var selectedRoom: [String: Any] = [:]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-//        ChatkitService.shared.chatManager?.connect(delegate: self) { user, error in
-//            guard let user = user, error == nil else {
-//                return StatusBarNotificationBanner(title: "Unable to fetch rooms", style: .danger).show()
-//            }
-//            
-//            self.rooms = user.rooms
-//            self.tableView.reloadData()
-//        }
+        ChatkitService.shared.rooms { [unowned self] (rooms, error) in
+            guard let rooms = rooms, error == nil else {
+                return StatusBarNotificationBanner(title: "Unable to load rooms", style: .danger).show()
+            }
+            
+            DispatchQueue.main.async {
+                self.rooms = rooms
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    @IBAction func logoutButtonWasPressed(_ sender: Any) {
+        AuthService.shared.logout()
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addFriendButtonWasPressed(_ sender: Any) {
@@ -37,8 +49,16 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
         }
         
         alertCtl.addAction(UIAlertAction(title: "Add", style: .default) { action in
-            if let user = self.friendTextField?.text {
-                print(user)
+            if let email = self.friendTextField?.text {
+                UserService.shared.addUser(email: email) { [unowned self] data in
+                    guard let room = data else {
+                        return StatusBarNotificationBanner(title: "Unable to add user.", style: .danger).show()
+                    }
+                    
+                    self.rooms.append(room)
+                    self.tableView.reloadData()
+                    StatusBarNotificationBanner(title: "Friend has been added.").show()
+                }
             }
         })
         
@@ -57,24 +77,31 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
         return rooms.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
+        let room = self.rooms[indexPath.row]
+        
+        let roomName = room["name"] as! String
+        let prefix = (room["channel"] as! Bool) ? "# " : ""
 
-        // Configure the cell...
+        cell.textLabel?.text = "\(prefix)\(roomName)"
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRoom = rooms[indexPath.row]
+        
+        performSegue(withIdentifier: "chatroom", sender: self)
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let dest = segue.destination as? ChatroomViewController {
+            dest.room = selectedRoom
+        }
     }
-    */
 
 }

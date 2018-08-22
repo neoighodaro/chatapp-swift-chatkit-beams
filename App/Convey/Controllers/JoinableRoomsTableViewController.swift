@@ -81,9 +81,22 @@ class JoinableRoomsTableViewController: UITableViewController, PCChatManagerDele
         let cell = tableView.dequeueReusableCell(withIdentifier: "room", for: indexPath)
         let room = rooms[indexPath.row]
         
-        cell.textLabel?.text = room.name
+        cell.textLabel?.text = "# \(room.name)"
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let room = self.rooms[indexPath.row]
+        
+        ChatkitService.shared.addUserToRoom(room: room) { added in
+            if added == true {
+                self.dismiss(animated: true, completion: nil)
+                return StatusBarNotificationBanner(title: "Joined room successfully.").show()
+            }
+            
+            StatusBarNotificationBanner(title: "Could not add user to room", style: .danger).show()
+        }
     }
 
     /*

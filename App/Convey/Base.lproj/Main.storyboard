@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,11 +79,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="pcP-q5-upx" kind="presentation" id="r55-nh-0Sw"/>
+                                    <segue destination="pcP-q5-upx" kind="presentation" identifier="Signin" id="r55-nh-0Sw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convey helps you connect easily with friends from around the world" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-wo-JAi">
-                                <rect key="frame" x="60" y="489" width="256.5" height="35"/>
+                                <rect key="frame" x="66" y="488" width="245" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="288" id="AjY-GR-c58"/>
                                 </constraints>
@@ -91,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELT-2K-ePa">
-                                <rect key="frame" x="43" y="444" width="288" height="35"/>
+                                <rect key="frame" x="43" y="442" width="288" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="To7-xQ-Tde"/>
                                 </constraints>
@@ -100,10 +101,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbQ-YB-gwD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="424"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONVEY!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNQ-0h-dTp">
-                                        <rect key="frame" x="70" y="182" width="235" height="60"/>
+                                        <rect key="frame" x="70" y="181" width="235" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -117,7 +118,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-Il-gFM">
-                                <rect key="frame" x="79.5" y="620" width="216" height="27"/>
+                                <rect key="frame" x="86" y="620" width="203" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="203" id="enE-pV-ghp"/>
                                     <constraint firstAttribute="height" constant="27" id="iFB-zh-fTf"/>
@@ -128,7 +129,7 @@
                                 </state>
                                 <connections>
                                     <action selector="welcomeButtonPressed:" destination="58a-w0-SCG" eventType="touchUpInside" id="mUb-aT-oOZ"/>
-                                    <segue destination="IqT-C5-hWp" kind="presentation" id="60u-wW-dG7"/>
+                                    <segue destination="IqT-C5-hWp" kind="presentation" identifier="Signup" id="60u-wW-dG7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,16 +186,41 @@
                                 <segue destination="GAu-Zw-bb8" kind="presentation" id="vPU-lo-u3D"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add friend" id="Fv8-EL-4pT">
-                            <connections>
-                                <action selector="addFriendButtonWasPressed:" destination="xHc-rS-P1K" id="nZw-tD-Riq"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add friend" id="Fv8-EL-4pT">
+                                <connections>
+                                    <action selector="addFriendButtonWasPressed:" destination="xHc-rS-P1K" id="nZw-tD-Riq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Logout" id="hOY-S8-W81">
+                                <connections>
+                                    <action selector="logoutButtonWasPressed:" destination="xHc-rS-P1K" id="MUf-lP-Ysd"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <segue destination="eJ4-Ya-6tQ" kind="show" identifier="chatroom" id="1nJ-Yf-YLw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H81-DF-mrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2502" y="-1462"/>
+        </scene>
+        <!--Chatroom View Controller-->
+        <scene sceneID="eSG-ot-UOP">
+            <objects>
+                <viewController id="eJ4-Ya-6tQ" customClass="ChatroomViewController" customModule="Convey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GKA-K3-dwa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ACu-oC-qJY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqH-no-krL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3329" y="-1462"/>
         </scene>
         <!--Rooms-->
         <scene sceneID="aBD-JM-9Ua">
@@ -275,7 +301,7 @@
                                 <rect key="frame" x="0.0" y="33" width="375" height="446"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtU-P0-bkX">
-                                        <rect key="frame" x="47" y="25" width="280" height="35"/>
+                                        <rect key="frame" x="47" y="25" width="280" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="bds-8R-hfB"/>
                                         </constraints>
@@ -406,7 +432,7 @@
                                 <rect key="frame" x="0.0" y="33" width="375" height="446"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-Om-ENR">
-                                        <rect key="frame" x="47" y="25" width="280" height="35"/>
+                                        <rect key="frame" x="47" y="25" width="280" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="a5S-ga-jOO"/>
                                         </constraints>

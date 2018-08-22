@@ -69,4 +69,11 @@ class UserService: ServiceRequest {
         }
     }
     
+    func addUser(email: String, handler: @escaping([String: Any]?) -> Void) {
+        request("/api/rooms", .post, params: ["email": email], headers: authHeader()) { resp in
+            guard let data = resp as? [String: Any] else { return handler(nil) }
+            handler(data)
+        }
+    }
+    
 }
