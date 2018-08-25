@@ -4,8 +4,9 @@ use_frameworks!
 
 # Replace `<Your Target Name>` with your app's target name.
 target 'Convey' do
-  pod 'Alamofire', '~> 4.7.2'
-  pod 'PusherChatkit', '~> 0.8.2'
+  pod 'Alamofire', '~> 4.7.3'
+  pod 'PusherChatkit', '~> 0.8.4'
   pod 'MessageKit', '~> 1.0.0'
   pod 'NotificationBannerSwift', '~> 1.6.3'
+  pod 'PushNotifications', '~> 1.0.1'
 end

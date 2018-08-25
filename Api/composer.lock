@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e72f0d0742a49be776265d726ba65d86",
+    "content-hash": "0b76381ca56cf509f87887bb13aa0ccb",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -1901,6 +1901,41 @@
                 "pusher-chatkit-server"
             ],
             "time": "2018-06-25T15:57:36+00:00"
+        },
+        {
+            "name": "pusher/pusher-push-notifications",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pusher/push-notifications-php.git",
+                "reference": "e77123079b11064028eec9f850d6ebea4f639486"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pusher/push-notifications-php/zipball/e77123079b11064028eec9f850d6ebea4f639486",
+                "reference": "e77123079b11064028eec9f850d6ebea4f639486",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "1.0.5",
+                "phpunit/phpunit": "~5.7.0",
+                "symfony/yaml": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pusher\\PushNotifications\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-07-31T13:14:33+00:00"
         },
         {
             "name": "ramsey/uuid",

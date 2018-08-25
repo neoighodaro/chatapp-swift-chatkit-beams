@@ -147,4 +147,40 @@ class ChatkitController extends Controller
 
         return response()->json([], $response['status']);
     }
+
+    /**
+     * Send push notification when a message is sent.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function sentMessage(Request $request)
+    {
+        $data = $request->validate([
+            'message' => 'required|string',
+            'chatkit_room_id' => 'required|exists:rooms',
+        ]);
+
+        $interest = $data['chatkit_room_id'];
+        $title = "New message from {$request->user()->name}";
+
+        $response = (array) app('push_notifications')->publish([$interest], [
+            'apns' => [
+                'aps' => [
+                    'alert' => [
+                        'title' => $title,
+                        'body' => $message,
+                    ],
+                    'mutable-content' => 0,
+                    'category' => 'pusher',
+                    'sound' => 'default'
+                ],
+                'data' => [
+                    'room' => Room::find($data['chatkit_room_id'])
+                ],
+            ],
+        ]);
+
+        return response()->json($response);
+    }
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "40D620179342F07E21DF2286A74D9EDD"
+               BlueprintIdentifier = "BFC9CD8CD5EFE9D24F160A4B97E5B987"
                BuildableName = "PusherPlatform.framework"
                BlueprintName = "PusherPlatform"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "40D620179342F07E21DF2286A74D9EDD"
+            BlueprintIdentifier = "BFC9CD8CD5EFE9D24F160A4B97E5B987"
             BuildableName = "PusherPlatform.framework"
             BlueprintName = "PusherPlatform"
             ReferencedContainer = "container:Pods.xcodeproj">
