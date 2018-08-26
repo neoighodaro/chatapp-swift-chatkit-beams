@@ -9,6 +9,7 @@
 import Foundation
 import PusherChatkit
 import PusherPlatform
+import PushNotifications
 
 enum ChatkitError: Error {
     case unableToConnect
@@ -56,15 +57,15 @@ class ChatkitService: ServiceRequest {
         
         request("/api/rooms/add", .post, params: params, headers: authHeader()) { resp in
             guard let _ = resp else { return handler(false) }
+            try? PushNotifications.shared.subscribe(interest: "\(room.id)")
             handler(true)
         }
     }
     
-    func sendMessage(message: String, room: PCRoom, handler: @escaping(Int?) -> Void) {
-        ChatkitService.shared.currentUser?.sendMessage(roomId: room.id) { (messageId, error) in
-            guard let messageId = messageId, error == nil else { return handler(nil) }
-            return handler(messageId)
-        }
+    func notifySentMessage(room: PCRoom, message: String) {
+        let headers = authHeader()
+        let params: [String: Any] = ["chatkit_room_id": room.id, "message": message]
+        request("/api/rooms/sent_message", .post, params: params, headers: headers)
     }
 }
 

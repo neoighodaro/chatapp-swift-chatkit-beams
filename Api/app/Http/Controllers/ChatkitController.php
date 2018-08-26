@@ -161,23 +161,22 @@ class ChatkitController extends Controller
             'chatkit_room_id' => 'required|exists:rooms',
         ]);
 
-        $interest = $data['chatkit_room_id'];
+        $interest = (string) $data['chatkit_room_id'];
         $title = "New message from {$request->user()->name}";
+        $room = Room::whereChatkitRoomId($data['chatkit_room_id'])->first();
 
         $response = (array) app('push_notifications')->publish([$interest], [
             'apns' => [
                 'aps' => [
                     'alert' => [
                         'title' => $title,
-                        'body' => $message,
+                        'body' => $data['message'],
                     ],
                     'mutable-content' => 0,
                     'category' => 'pusher',
                     'sound' => 'default'
                 ],
-                'data' => [
-                    'room' => Room::find($data['chatkit_room_id'])
-                ],
+                'data' => ['room' => $room],
             ],
         ]);
 

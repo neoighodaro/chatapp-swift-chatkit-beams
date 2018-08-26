@@ -11,6 +11,10 @@ import Alamofire
 
 class ServiceRequest {
     
+    func request(_ url: String, _ method: HTTPMethod = .get, params: Parameters?, headers: HTTPHeaders?) {
+        request(url, method, params: params, headers: headers, handler: { _ in })
+    }
+    
     func request(_ url: String, _ method: HTTPMethod = .get, params: Parameters?, headers: HTTPHeaders?, handler: @escaping(AnyObject?) -> Void) {
         let encoding = JSONEncoding.default
         let url = AppConstants.ENDPOINT + url

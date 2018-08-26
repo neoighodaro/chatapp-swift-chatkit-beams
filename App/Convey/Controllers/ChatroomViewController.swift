@@ -156,8 +156,11 @@ extension ChatroomViewController: MessagesDisplayDelegate {
 
 extension ChatroomViewController: MessageInputBarDelegate {
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        currentUser?.sendMessage(roomId: currentRoom!.id, text: text) { msgId, error in
+        guard let room = currentRoom else { return }
+        
+        currentUser?.sendMessage(roomId: room.id, text: text) { msgId, error in
             if error == nil {
+                ChatkitService.shared.notifySentMessage(room: room, message: text)
                 DispatchQueue.main.async { inputBar.inputTextView.text = String() }
             }
         }

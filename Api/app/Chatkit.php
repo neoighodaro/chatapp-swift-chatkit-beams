@@ -14,12 +14,6 @@ class Chatkit extends PusherChatkit
         ]);
     }
 
-    /**
-     * Returns a list of rooms.
-     *
-     * @param boolean $include_private
-     * @return array
-     */
     public function rooms($include_private = false)
     {
         $ch = $this->createCurl(

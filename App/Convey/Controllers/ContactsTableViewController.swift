@@ -14,7 +14,7 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
     
     var rooms: [[String: Any]] = []
     var friendTextField: UITextField?
-    var selectedRoom: [String: Any] = [:]
+    var selectedRoom: [String: Any]? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,10 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if (selectedRoom != nil) {
+            return performSegue(withIdentifier: "Contact", sender: self)
+        }
         
         ChatkitService.shared.rooms { [unowned self] (rooms, error) in
             guard let rooms = rooms, error == nil else {
@@ -91,7 +95,6 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedRoom = rooms[indexPath.row]
-        
         performSegue(withIdentifier: "chatroom", sender: self)
     }
 
@@ -99,8 +102,9 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let dest = segue.destination as? ChatroomViewController {
-            dest.room = selectedRoom
+        if let dest = segue.destination as? ChatroomViewController, let room = selectedRoom {
+            dest.room = room
+            selectedRoom = nil
         }
     }
 

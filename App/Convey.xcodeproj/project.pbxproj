@@ -14,7 +14,6 @@
 		B55061FC2110C6D80029F250 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55061FB2110C6D80029F250 /* ServiceRequest.swift */; };
 		B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */; };
 		B56D497F20F3CF7D009E3E4B /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */; };
-		B59B9C332131309500A2992C /* DeeplinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59B9C322131309500A2992C /* DeeplinkManager.swift */; };
 		B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */; };
 		B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */; };
 		B5C2D9EA20F389CB00FFC8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C2D9E820F389CB00FFC8E9 /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 		B56D497C20F3CCF5009E3E4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B56D497E20F3CF7D009E3E4B /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		B59B9C3121312E0000A2992C /* Convey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Convey.entitlements; sourceTree = "<group>"; };
-		B59B9C322131309500A2992C /* DeeplinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeeplinkManager.swift; path = Services/DeeplinkManager.swift; sourceTree = "<group>"; };
 		B5C2D9E120F389CB00FFC8E9 /* Convey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Convey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C2D9E620F389CB00FFC8E9 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				B5C2D9E420F389CB00FFC8E9 /* AppDelegate.swift */,
 				B5C2DA0520F39C9E00FFC8E9 /* AppConstants.swift */,
 				B5C2D9FB20F38ECA00FFC8E9 /* ConveyAccessToken.swift */,
-				B59B9C322131309500A2992C /* DeeplinkManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -312,7 +309,6 @@
 				B5C2DA0020F3968800FFC8E9 /* WelcomeViewController.swift in Sources */,
 				B5C2D9E720F389CB00FFC8E9 /* LaunchViewController.swift in Sources */,
 				B50EE2EA212DE3AA00A4C557 /* Message.swift in Sources */,
-				B59B9C332131309500A2992C /* DeeplinkManager.swift in Sources */,
 				B56D497D20F3CCF5009E3E4B /* LoginViewController.swift in Sources */,
 				B5C2D9E520F389CB00FFC8E9 /* AppDelegate.swift in Sources */,
 			);

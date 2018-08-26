@@ -1,6 +1,5 @@
 <?php
 
-
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/chatkit/token', 'ChatkitController@getToken');
     Route::post('/rooms/sent_message', 'ChatkitController@sentMessage');
