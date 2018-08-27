@@ -9,6 +9,7 @@
 import UIKit
 import PusherChatkit
 import NotificationBannerSwift
+import PushNotifications
 
 class ContactsTableViewController: UITableViewController {
     
@@ -27,6 +28,12 @@ class ContactsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.rooms = rooms
                 self.tableView.reloadData()
+            }
+            
+            for room in rooms {
+                if let roomId = room["chatkit_room_id"] as? Int {
+                    try? PushNotifications.shared.subscribe(interest: "\(roomId)")
+                }
             }
         }
     }
