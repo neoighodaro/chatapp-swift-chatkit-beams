@@ -11,7 +11,7 @@ import PusherPlatform
 import PusherChatkit
 import NotificationBannerSwift
 
-class JoinableRoomsTableViewController: UITableViewController, PCChatManagerDelegate {
+class JoinableRoomsTableViewController: UITableViewController {
     
     var rooms: [PCRoom] = []
 
@@ -98,15 +98,5 @@ class JoinableRoomsTableViewController: UITableViewController, PCChatManagerDele
             StatusBarNotificationBanner(title: "Could not add user to room", style: .danger).show()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -10,22 +10,14 @@ import UIKit
 import PusherChatkit
 import NotificationBannerSwift
 
-class ContactsTableViewController: UITableViewController, PCChatManagerDelegate {
+class ContactsTableViewController: UITableViewController {
     
     var rooms: [[String: Any]] = []
     var friendTextField: UITextField?
     var selectedRoom: [String: Any]? = nil
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if (selectedRoom != nil) {
-            return performSegue(withIdentifier: "Contact", sender: self)
-        }
         
         ChatkitService.shared.rooms { [unowned self] (rooms, error) in
             guard let rooms = rooms, error == nil else {
@@ -71,8 +63,6 @@ class ContactsTableViewController: UITableViewController, PCChatManagerDelegate 
         present(alertCtl, animated: true, completion: nil)
     }
     
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
