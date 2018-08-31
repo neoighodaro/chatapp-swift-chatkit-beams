@@ -27,17 +27,4 @@ class Chatkit extends PusherChatkit
 
         return $this->execCurl($ch);
     }
-
-    public function addUsersToRoom($room_id, array $user_ids)
-    {
-        $ch = $this->createCurl(
-            $this->api_settings,
-            "/rooms/{$room_id}/users/add",
-            $this->getServerToken(),
-            'PUT',
-            ['user_ids' => $user_ids]
-        );
-
-        return $this->execCurl($ch);
-    }
 }
