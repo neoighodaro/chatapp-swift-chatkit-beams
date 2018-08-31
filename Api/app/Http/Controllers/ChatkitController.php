@@ -129,10 +129,10 @@ class ChatkitController extends Controller
             'room_id' => 'required',
         ]);
 
-        $response = $this->chatkit->addUsersToRoom(
-            $data['room_id'],
-            [$me->chatkit_id]
-        );
+        $response = $this->chatkit->addUsersToRoom([
+            'room_id' => $data['room_id'],
+            'user_ids' => [$me->chatkit_id]
+        ]);
 
         if ($response['status'] == 204) {
             $room = Room::firstOrCreate(
