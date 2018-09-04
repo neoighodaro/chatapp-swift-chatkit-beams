@@ -4,8 +4,8 @@ Create a chatroom with Swift, Pusher Chatkit, and Pusher Beams
 
 ### View tutorial
 
-- [Part 1](#)
-- [Part 2](#)
+- [Part 1](https://pusher.com/tutorials/ios-messenger-push-notifications-part-1)
+- [Part 2](https://pusher.com/tutorials/ios-messenger-push-notifications-part-2)
 
 ## Getting Started
 
